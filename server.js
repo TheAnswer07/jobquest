@@ -58,7 +58,8 @@ const sessionSettings = {
 
 const app = express();
 
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
+// const PORT = process.env.PORT || 3001;
 
 // handlebars template engine
 
@@ -87,5 +88,5 @@ app.use(jobFormRoute);
 // server listener + sequelize sync
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Go to http://localhost:3001/'));
+    app.listen(process.env.PORT || PORT,() => console.log("Go to " + PORT));
 });
