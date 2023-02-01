@@ -88,5 +88,5 @@ app.use(jobFormRoute);
 // server listener + sequelize sync
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(process.env.PORT || PORT,() => console.log("Go to " + PORT));
+    app.listen(process.env.PORT || PORT,() => console.log("Go to http://localhost:3000/"));
 });
