@@ -1,11 +1,11 @@
 // dependencies
-require('dotenv').config();
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const expsesh = require('express-session');
 const passport = require('passport');
 const local = require('./strategies/local');
+
 
 const cors = require('cors')
 
